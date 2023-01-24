@@ -3,12 +3,12 @@ import './App.css'
 import SingleCard from './components/SingleCard'
 
 const cardImages = [
-  { "src": "/img/helmet-1.png", matched: false },
-  { "src": "/img/potion-1.png", matched: false },
-  { "src": "/img/ring-1.png", matched: false },
-  { "src": "/img/scroll-1.png", matched: false },
-  { "src": "/img/shield-1.png", matched: false },
-  { "src": "/img/sword-1.png", matched: false },
+  { "src": "/magic-memory/img/helmet-1.png", matched: false },
+  { "src": "/magic-memory/img/potion-1.png", matched: false },
+  { "src": "/magic-memory/img/ring-1.png", matched: false },
+  { "src": "/magic-memory/img/scroll-1.png", matched: false },
+  { "src": "/magic-memory/img/shield-1.png", matched: false },
+  { "src": "/magic-memory/img/sword-1.png", matched: false },
 ]
 
 function App() {
@@ -59,8 +59,6 @@ function App() {
     }
   }, [choiceOne, choiceTwo])
 
-  console.log(cards)
-
   // reset choices & increase turn
   const resetTurn = () => {
     setChoiceOne(null)
@@ -69,7 +67,7 @@ function App() {
     setDisabled(false)
   }
 
-  // start the game automatically
+  // start new game automagically
   useEffect(() => {
     shuffleCards()
   }, [])
@@ -90,6 +88,7 @@ function App() {
           />
         ))}
       </div>
+
       <p>Turns: {turns}</p>
     </div>
   );
